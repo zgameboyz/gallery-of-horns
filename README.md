@@ -78,30 +78,30 @@ Estimate of time needed to complete: 1 hour
 
 Start time: 2:07 PM
 
-Finish time: _____
+Finish time: 2:42 PM
 
-Actual time needed to complete: _____
+Actual time needed to complete: 35 Minutes
 
 ### Allow Users to vote for their favorite beast
 
-Number and name of feature: ________________________________
+Number and name of feature: #2 Voting
 
-Estimate of time needed to complete: _____
+Estimate of time needed to complete: 2 hours
 
-Start time: _____
+Start time: 2:42 PM
 
-Finish time: _____
+Finish time: 3:50 PM
 
-Actual time needed to complete: _____
+Actual time needed to complete: 1hr 8 mins.
 
 ### Bootstrap
 
-Number and name of feature: ________________________________
+Number and name of feature: #3 bootstrap
 
-Estimate of time needed to complete: _____
+Estimate of time needed to complete: 1hour
 
-Start time: _____
+Start time: 8PM
 
-Finish time: _____
+Finish time: 8:29PM
 
-Actual time needed to complete: _____
+Actual time needed to complete: 29 Mins.
