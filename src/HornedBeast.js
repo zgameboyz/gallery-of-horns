@@ -2,7 +2,7 @@ import React from 'react';
 import { CardColumns, Container } from 'react-bootstrap';
 import heart from './heart.png'
 import Card from "react-bootstrap/Card";
-import App from "./App.js";
+
 class HornedBeast extends React.Component {
 
 
@@ -25,7 +25,7 @@ class HornedBeast extends React.Component {
 
   }
   //Calls this.prop.showModal with the beastNum of this beast.
-  idkWhatToCallThis = () => {
+  onImageClicked = () => {
     this.props.showModal(this.props.beastNum);
   }
   render() {
@@ -33,7 +33,7 @@ class HornedBeast extends React.Component {
     return (
       <CardColumns>
         <Card style={{ width: '18rem' }}>
-          <Card.Img variant="top" src={this.props.imgUrl} onClick={this.idkWhatToCallThis} />
+          <Card.Img variant="top" src={this.props.imgUrl} onClick={this.onImageClicked} />
           <Card.Body>
             <Card.Title>{this.props.title}</Card.Title>
             <Card.Text>
