@@ -1,6 +1,7 @@
 import { Button } from "react-bootstrap";
 import React from "react";
 import Modal from 'react-bootstrap/Modal';
+import "./selectedBeast.css";
 
 
 
@@ -14,10 +15,10 @@ class SelectedBeast extends React.Component{
     <>
     <Modal show={this.props.showModal}>
       <Modal.Header>
-      <p>This is my Header</p>
+      <p>{this.props.devil && this.props.devil.title}</p>
       </Modal.Header>
       <Modal.Body>
-        <img src={this.props.devil.image_url}></img>
+        <img src={this.props.devil && this.props.devil.image_url} alt ="blah"></img>
       </Modal.Body>
       <Modal.Footer>
       <Button onClick={this.props.hideModal}>Close</Button>

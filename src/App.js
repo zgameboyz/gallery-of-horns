@@ -2,19 +2,22 @@ import './App.css';
 import React from 'react';
 import Main from './Main.js';
 import SelectedBeast from './SelectedBeast.js';
+import data from './data.json';
 //import Header from './Header.js';
 class App extends React.Component {
 
-  constructor(props){
+  constructor(props) {
     super(props);
-    this.state={
-      shouldShowModal: false
-    }; 
+    this.state = {
+      shouldShowModal: false,
+      currentBeast: {}
+    };
   }
 
-  showModal = () => {
+  showModal = (beastNum) => {
     this.setState({
       shouldShowModal: true,
+      currentBeast: data[beastNum]
     });
   }
   hideModal = () => {
@@ -31,8 +34,13 @@ class App extends React.Component {
       <>
         {//<Header></Header>
         }
-        <Main></Main>
-        <SelectedBeast></SelectedBeast>
+        <Main 
+          showModal={this.showModal} 
+          data={data} />
+        <SelectedBeast 
+          showModal={this.state.shouldShowModal}
+          hideModal={this.hideModal}
+          devil={this.state.currentBeast}></SelectedBeast>
         <footer><h3>Author: Joel Connell</h3></footer>
 
 

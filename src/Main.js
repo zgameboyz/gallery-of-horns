@@ -9,24 +9,9 @@ class Main extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      showModal: false,
-      currentBeast: data[0]
-    };
-  }
-
-  showModal = (beastNum) => {
-
-    this.setState({
-      showModal: true,
-      currentBeast: data[beastNum],
+      showModal: false
       
-    });
-  }
-  hideModal = () => {
-    this.setState({
-      showModal: false,
-      currentBeast: data[0]
-    });
+    };
   }
 
   render() {
@@ -35,10 +20,10 @@ class Main extends React.Component {
     return (
 
       <>
-        <Header>Blah blah blah</Header>
-        <SelectedBeast showModal={this.state.showModal} hideModal={this.hideModal} devil={this.state.currentBeast}/>
+        <Header></Header>
+        <SelectedBeast />
         <CardColumns>
-          {data.map((datas, i) =>
+          {this.props.data.map((datas, i) =>
 
             <HornedBeast
               beastNum={i}
@@ -47,7 +32,7 @@ class Main extends React.Component {
               imgUrl={datas.image_url}
               description={datas.description}
               horns={datas.horns}
-              showModal={this.showModal}
+              showModal={this.props.showModal}
               hideModal={this.hideModal}
             />
           )}
