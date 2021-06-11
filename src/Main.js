@@ -1,9 +1,8 @@
 import React from 'react';
 import HornedBeast from './HornedBeast';
-import data from './data.json';
-import CardColumns from 'react-bootstrap/CardColumns'
-import Header from './Header.js';
+import CardColumns from 'react-bootstrap/CardColumns';
 import SelectedBeast from './SelectedBeast.js';
+import Filter from './filter.js';
 class Main extends React.Component {
 
   constructor(props) {
@@ -15,15 +14,18 @@ class Main extends React.Component {
   }
 
   render() {
-    
+   
 
     return (
 
       <>
-        <Header></Header>
+        <Filter 
+        allBeasts={this.props.data}
+        />
         <SelectedBeast />
         <CardColumns>
-          {this.props.data.map((datas, i) =>
+         
+          {this.props.Filter.map((datas, i) =>
 
             <HornedBeast
               beastNum={i}

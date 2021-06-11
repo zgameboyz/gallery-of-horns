@@ -1,14 +1,10 @@
 import React from 'react';
-import HornedBeast from './HornedBeast';
-import data from './data.json';
-import { Card } from 'react-bootstrap';
-import CardColumns from 'react-bootstrap/CardColumns'
-
+import Filter from'./filter.js';
 class Header extends React.Component{
 render(){
   return(
     <>
-<h1>This is the Lab 1 Gallery of Horns</h1>
+
   
 </>
   )}
