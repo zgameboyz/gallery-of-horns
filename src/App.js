@@ -3,6 +3,8 @@ import React from 'react';
 import Main from './Main.js';
 import SelectedBeast from './SelectedBeast.js';
 import data from './data.json';
+import Filter from './filter.js'
+import Header from './Header.js'
 //import Header from './Header.js';
 class App extends React.Component {
 
@@ -32,7 +34,9 @@ class App extends React.Component {
 
     return (
       <>
-        {//<Header></Header>
+        {<Header
+          devil={this.state.currentBeast}
+          />
         }
         <Main 
           showModal={this.showModal} 

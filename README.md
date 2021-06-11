@@ -105,3 +105,15 @@ Start time: 8PM
 Finish time: 8:29PM
 
 Actual time needed to complete: 29 Mins.
+
+### Filter
+
+Number and name of feature: #5 Filter
+
+Estimate of time needed to complete: 4hours
+
+Start time: 5PM
+
+Finish time: Not finished yet
+
+Actual time needed to complete: Still ongoing
