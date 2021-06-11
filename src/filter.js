@@ -10,29 +10,35 @@ class Filter extends React.Component{
 
     this.state = {
       hornCount: 0,
-      beastList: this.props.allBeasts
+   
     }
   }
+  handleChange = e =>{
+    this.setState({
+    
+      hornCount:e.target.value
+      
+    });
+
+  }
+
   handleFormSubmit = e => {
     e.preventDefault();
 
     let beastArray = this.props.allBeasts.filter(beast => e.target.filterHorns.value == beast.horns);
-    this.setState({
-      beastList:beastArray,
-      hornCount:e.target.filterHorns.value
-      
-    });
+    this.props.setData(beastArray);
     console.log(beastArray)
   }
  
  
   render(){
 return(
+
 <Form onSubmit={this.handleFormSubmit}>
   
   <Form.Group controlId="filterHorns">
     <Form.Label>Filter by Number of Horns</Form.Label>
-    <Form.Control as="select">
+    <Form.Control as="select" onChange={this.handleChange}>
       <option value="1">1</option>
       <option value="2">2</option>
       <option value="3">3</option>

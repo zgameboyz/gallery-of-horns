@@ -12,10 +12,20 @@ class App extends React.Component {
     super(props);
     this.state = {
       shouldShowModal: false,
-      currentBeast: {}
+      currentBeast: {},
+      currentData: data
     };
   }
+  setData = (obj) =>{
 
+    this.setState({
+
+      currentData: obj
+
+
+    })
+
+  }
   showModal = (beastNum) => {
     this.setState({
       shouldShowModal: true,
@@ -40,7 +50,9 @@ class App extends React.Component {
         }
         <Main 
           showModal={this.showModal} 
-          data={data} />
+          currentData={this.state.currentData} 
+          setData={this.setData}
+          allData={data}/>
         <SelectedBeast 
           showModal={this.state.shouldShowModal}
           hideModal={this.hideModal}

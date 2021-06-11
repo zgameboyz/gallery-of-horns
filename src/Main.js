@@ -20,20 +20,21 @@ class Main extends React.Component {
 
       <>
         <Filter 
-        allBeasts={this.props.data}
+        allBeasts={this.props.allData}
+        setData={this.props.setData}
         />
         <SelectedBeast />
         <CardColumns>
          
-          {this.props.Filter.map((datas, i) =>
+          {this.props.currentData.map((data, i) =>
 
             <HornedBeast
               beastNum={i}
               key={i}
-              title={datas.title}
-              imgUrl={datas.image_url}
-              description={datas.description}
-              horns={datas.horns}
+              title={data.title}
+              imgUrl={data.image_url}
+              description={data.description}
+              horns={data.horns}
               showModal={this.props.showModal}
               hideModal={this.hideModal}
             />
